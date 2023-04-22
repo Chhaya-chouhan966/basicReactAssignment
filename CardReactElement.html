@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #root {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mainDiv {
+            margin-top: 100px;
+            height: 500px;
+            width: 550px;
+            box-shadow: 0 0 5px black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .div {
+            display: flex;
+            flex-direction: column;
+            height: 80px;
+            width: 400px;
+        }
+
+        .upperDiv {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 50px;
+            width: 400px;
+            color: purple;
+
+        }
+
+        .lowerDiv {
+            height: 50px;
+            width: 400px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .div2{
+            display:  flex;
+            justify-content: space-between;
+            width: 350px;
+            height: 50px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script>
+
+        const img = React.createElement('img', {
+            src: "Card.png",
+            width: "150px",
+            height: "150px"
+        })
+        const h2 = React.createElement('h2', {}, "Soniya Sharma")
+        const p = React.createElement('p', {}, "Software Devlopment")
+
+        const upperDivh1 = React.createElement('h3', {}, "177")
+        const upperDivh2 = React.createElement('h3', {}, "47")
+        const upperDivh3 = React.createElement('h3', {}, "20")
+
+        const upperDiv = React.createElement('div', { className: "upperDiv" }, [upperDivh1, upperDivh2, upperDivh3])
+        
+        const lowerDivh1 = React.createElement('h3', {}, "POSTS")
+        const lowerDivh2 = React.createElement('h3', {}, "FLLOWERS")
+        const lowerDivh3 = React.createElement('h3', {}, "FLLOWING")
+        
+        const lowerDiv = React.createElement('div', { className: "lowerDiv" }, [lowerDivh1, lowerDivh2, lowerDivh3])
+        const div = React.createElement('div', { className: "div" }, [upperDiv, lowerDiv])
+
+        const div2 = React.createElement('div', { className: "div2" }, [React.createElement('button', {
+            
+          style:{width:"130px", borderRadius:"10px", backgroundColor:"purple", color: "white", border:"none",fontSize:"1.2rem"}   
+        }, "FOLLOW"),
+        React.createElement('button', {
+            style:{width:"130px",borderRadius:"10px", backgroundColor:"pink", color: "white", border:"none",fontSize:"1.2rem"}   
+        }, "MESSAGE")])
+        
+        
+        const mainDiv = React.createElement('div', { className: "mainDiv" }, [img, h2, p, div, div2])
+        const root = ReactDOM.createRoot(document.getElementById("root"))
+        root.render(mainDiv)
+
+    </script>
+</body>
+
+</html>
