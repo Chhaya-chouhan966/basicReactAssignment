@@ -8,10 +8,45 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <title>Document</title>
+    <style>
+        .mainDiv {
+            width: 50%;
+            margin: 50px 10rem;
+            background-color: whitesmoke;
+            padding: 2rem 2rem;
+        }
+        .p{
+            margin-left: 1rem;
+        }
+
+    </style>
 </head>
 
 <body>
-  <h2>hello</h2>
+    <div id="root">
+    </div>
 </body>
+
+<script>
+    const h1 = React.createElement('h1', {}, "Topic Covered")
+    const p = React.createElement('p', {}, "The following is list of all the topics we cover in the MDN learnig area.")
+    const a = React.createElement('a', { href: "https://www.w3schools.com/REACT/DEFAULT.ASP" }, "Getting started with the web")
+    const p2 = React.createElement('p', { className:"p"}, "Provides a practicl introduction to web devlopment for complete beginners.")
+    const a2 = React.createElement('a', { href: "https://www.w3schools.com/html/" }, "HTML - Structuring the web")
+    const p3 = React.createElement('p', { className:"p"}, "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore unde fugiat mollitia blanditiis laudantium perferendis a pariatur dicta eligendi facilis.")
+    const a3 = React.createElement('a', { href: "https://www.w3schools.com/css/" }, "CSS - Styling the web")
+    const p4 = React.createElement('p', { className:"p"}, "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore unde fugiat mollitia blanditiis laudantium perferendis a pariatur dicta eligendi facilis.")
+
+
+
+
+    let div = React.createElement('div',
+        {
+            className: "mainDiv",
+        },
+        [h1, p, a, p2, a2, p3, a3, p4])
+    const root = ReactDOM.createRoot(document.getElementById("root"))
+    root.render(div)
+</script>
 
 </html>
