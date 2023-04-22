@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <title>Document</title>
+
+    <style>
+        #root{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .mainDiv{
+            margin: 100px;
+            width: 40%;
+           background-color: whitesmoke;
+           padding: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    
+   
+    <script>
+
+        const br=React.createElement('br')
+        const a=React.createElement('a', {href:"https://developer.mozilla.org/en-US/docs/Web"}, "the rest of MDN")
+        const h1=React.createElement('h1',{}, "Learn Web Development")
+        
+        const p=React.createElement('p',{}, ["Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, quidem iste? Porro, sit tenetur? Voluptas.",
+        br,"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, quidem iste? Porro, sit tenetur? Voluptas.",
+        br ,br,br,
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, quidem iste? Porro, sit tenetur? Voluptas.",
+        br,"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, quidem iste? Porro, sit tenetur? Voluptas.",
+        br, "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ", a," https://developer.mozilla.org",
+        br, "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
+    
+        br,br, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, laboriosam beatae? Fuga, molestiae ipsam",
+        br,    "vel dolores nesciunt repellendus expedita sapiente harum, facilis, est in mollitia natus quisquam? Culpa, eos",
+        br,    "labore nihil sint sapiente earum expedita doloremque numquam possimus nostrum libero. Earum praesentium " ,
+        br,    "corporis odio necessitatibus reiciendis, eum eligendi quam ipsum, illum veritatis vero dignissimos dicta eaque",
+        br,"dolorum recusandae autem."])    
+
+        const div = React.createElement('div',{
+            className:"mainDiv"
+        }, h1,p)
+        const root =ReactDOM.createRoot(document.getElementById("root"))
+        root.render(div)
+    </script>
+</body>
+</html>
