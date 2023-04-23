@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #root {
+            height: 100%;
+            width: 100%;
+
+        }
+
+        .mainDiv {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 1rem 1rem;
+        }
+
+        .linkDiv {
+            width: 7%;
+            display: flex;
+            justify-content: space-around;
+        }
+        .ul, .ol{
+            padding-left: 2.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+
+
+    <script type="text/babel">
+
+        const mainDiv = <div className="mainDiv">
+            <h1>Chhaya Chouhan</h1><br />
+            <p>Software Developing, Learning at Geekster</p><br />
+            <div className="linkDiv">
+                <a href="https://www.linkedin.com/feed/">Linkedin</a>
+                <a href="https://github.com/Chhaya-chouhan966/">Github</a>
+            </div>
+            <br />
+            <hr />
+            <br />
+            <h2>Experience</h2>
+            <br />
+            <h3>Software learning at Geekster</h3>
+            <br />
+            <p>I work with amazon in transportation team, some more description Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, ullam! Maxime officiis consequuntur libero eaque reprehenderit quisquam nam ab vitae totam id commodi laborum enim, sint ea odit quasi soluta!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br /> Provident iusto ut praesentium modi. Incidunt atque voluptatem, dignissimos officiis reprehenderit est!</p>
+            <br />
+            <hr />
+            <br />
+            <h3>Educating at Geekster</h3>
+            <br />
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora cum inventore aliquam, nulla eos dignissimos ipsum voluptas id, dolores suscipit totam nostrum perferendis alias, expedita quaerat distinctio asperiores! Nobis, aliquid. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsa ab qui autem nesciunt vel consequatur non totam, temporibus excepturi voluptatem iure impedit ut repellendus earum necessitatibus nemo eligendi, animi debitis reiciendis suscipit. Unde iure obcaecati dolores, numquam quibusdam rerum facilis a quam quos ad ullam consectetur reiciendis deserunt similique.</p>
+            <br />
+            <hr />
+            <br />
+            <h2>Skills</h2>
+            <br />
+            <ul className="ul">
+                <li>Html</li>
+                <li>Css</li>
+                <li>Javascript</li>
+                <li>React</li>
+                <li>Dsa</li>
+            </ul>
+            <br/>
+            <hr/>
+            <br/>
+            <h2>Hobbies</h2>
+            <br/>
+            <ol className="ol">
+                <li>Reading</li>
+                <li>Walking</li>
+                <li>Singing</li>
+                <li>Shopping</li>
+            </ol>
+            <br/>
+            <hr/>
+        </div>
+
+
+
+
+        const root = ReactDOM.createRoot(document.getElementById("root"))
+        root.render(mainDiv)
+
+    </script>
+</body>
+
+</html>
