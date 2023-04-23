@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #root {
+            height: 100%;
+            width: 100%;
+            border: 1px solid white;
+            background-image: url("https://www.news-medical.net/image.axd?picture=2021%2F7%2Fshutterstock_1548860402.jpg");
+            background-size: 100% 100%;
+
+        }
+
+        .logo {
+
+            font-family: 'Courier New', Courier, monospace;
+            font-style: italic;
+        }
+
+        a:hover {
+            background-color: #8e9f03;
+            padding: 1.5rem 1.5rem;
+        }
+        
+        #footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Oswald', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+
+        function Header() {
+            return <div style={{ height: "75px", width: "100%", backgroundColor: "black", color: "white", display: "flex", justifyContent: "space-between" }}>
+                <div style={{ width: "30%", display: "flex", justifyContent: "flex-start", alignItems: "center" }}>
+
+                    <h1 className="logo">Logo</h1>
+                </div>
+                <div style={{ width: "40%", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                    <a href="#" style={{ color: "white", fontSize: "1.1rem", textDecoration: "none" }}>HOME</a>
+                    <a href="#" style={{ color: "white", fontSize: "1.1rem", textDecoration: "none" }}>ABOUT</a>
+                    <a href="#" style={{ color: "white", fontSize: "1.1rem", textDecoration: "none" }}>MENU</a>
+                    <a href="#" style={{ color: "white", fontSize: "1.1rem", textDecoration: "none" }}>ORDER</a>
+                    <a href="#" style={{ color: "white", fontSize: "1.1rem", textDecoration: "none" }}>CONTACT</a>
+
+                </div>
+            </div>
+
+        }
+
+        function Main() {
+            return <div className="main" style={{ height: "550px", width: "100%",display: "flex", justifyContent:"center", alignItems: "flex-start"}} >
+                <h1 style={{padding:"1rem"}}>Home</h1>
+            </div>
+
+        }
+
+        function Footer() {
+            return <div id="footer" style={{ height: "40px", width: "100%"}}>
+                <p>www.KodingMadeSimple.com</p>
+            </div>
+
+        }
+
+        function App() {
+            return <div> <Header />
+                <Main />
+                <Footer />
+            </div>
+
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'))
+        root.render(
+            <App />
+        );
+
+        // ReactDOM.render(<App/>,document.getElementById('root'))
+
+    </script>
+</body>
+
+</html>
