@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #root {
+            height: 100%;
+            width: 100%;
+            border: 1px solid white;
+        }
+
+        a:hover {
+            background-color: #aa0000;
+            padding: 1.5rem 1.5rem;
+
+        }
+
+        #hi {
+            display: flex;
+            align-items: center;
+            padding-left: 80rem;
+            font-family: 'Oswald', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+
+        function Header() {
+            return <div style={{ height: "75px", backgroundColor: "#cc0000", color: "white", display: "flex", justifyContent: "space-between", margin: "2rem 1rem" }}>
+                <div style={{ width: "30%", display: "flex", justifyContent: "center", alignItems: "center" }}>
+                    <h1>Coding Made Simple</h1>
+                </div>
+                <div style={{ width: "50%", display: "flex", justifyContent: "space-evenly", alignItems: "center" }}>
+                    <a href="#" style={{ color: "white", fontSize: "1.2rem", textDecoration: "none" }}>Bootstrap</a>
+                    <a href="#" style={{ color: "white", fontSize: "1.2rem", textDecoration: "none" }}>Themes</a>
+                    <a href="#" style={{ color: "white", fontSize: "1.2rem", textDecoration: "none" }}>Blogs</a>
+                </div>
+            </div>
+
+        }
+
+        function Main() {
+            return <div style={{ height: "550px", backgroundColor: "whitesmoke", padding: "13rem 15rem" }} >
+                <h1 style={{ margin: "1rem 0" }} >Customize Bootstrap Navbar</h1>
+                <p>Easy way to change navbar background, Text and hover link color in bootstrap...</p>
+
+            </div>
+
+        }
+
+        function Footer() {
+            return <div id="hi" style={{ height: "40px", backgroundColor: "whitesmoke" }}>
+                <p>www.KodingMadeSimple.com</p>
+            </div>
+
+        }
+
+        function App() {
+            return <div> <Header />
+                <Main />
+                <Footer />
+            </div>
+
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'))
+        root.render(
+            <App />
+        );
+
+        // ReactDOM.render(<App/>,document.getElementById('root'))
+
+    </script>
+</body>
+
+</html>
